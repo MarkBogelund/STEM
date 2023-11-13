@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { sectionContext } from "../App";
+import { act } from "react-dom/test-utils";
 
 const Navbar = () => {
-  const [navBarColor, setNavBarColor] = useState("bg-custom_blue");
+  const { setActiveSection, setActiveSectionColor, activeSectionColor } =
+    useContext(sectionContext);
   const offset = 400;
 
   const convertSectionHeightToPixels = (section: HTMLElement) => {
@@ -43,15 +46,15 @@ const Navbar = () => {
       window.scrollY <
         scienceSection.offsetTop + scienceSectionHeightInPixels - offset
     ) {
-      //console.log("science");
-      setNavBarColor("bg-custom_blue");
+      setActiveSection("Science");
+      setActiveSectionColor("bg-custom_blue");
     } else if (
       window.scrollY >= technologySection.offsetTop - offset &&
       window.scrollY <
         technologySection.offsetTop + technologySectionHeightInPixels - offset
     ) {
-      //console.log("technology");
-      setNavBarColor("bg-custom_green");
+      setActiveSection("Technology");
+      setActiveSectionColor("bg-custom_green");
     } else if (
       window.scrollY >= engenieeringSection.offsetTop - offset &&
       window.scrollY <
@@ -59,15 +62,18 @@ const Navbar = () => {
           engenieeringSectionHeightInPixels -
           offset
     ) {
-      //console.log("engenieering");
-      setNavBarColor("bg-custom_red");
+      setActiveSection("Engineering");
+      setActiveSectionColor("bg-custom_red");
     } else if (
       window.scrollY >= mathematicsSection.offsetTop - offset &&
       window.scrollY <
         mathematicsSection.offsetTop + mathematicsSectionHeightInPixels - offset
     ) {
-      //console.log("mathematics");
-      setNavBarColor("bg-custom_yellow");
+      setActiveSection("Mathematics");
+      setActiveSectionColor("bg-custom_yellow");
+    } else {
+      setActiveSection("STEM");
+      setActiveSectionColor("bg-custom_blue");
     }
   });
 
@@ -78,18 +84,15 @@ const Navbar = () => {
       navbarElement.classList.add("transition-bg-color");
       setTimeout(() => {
         navbarElement.classList.remove("transition-bg-color");
-      }, 300); // Adjust the timing to match the transition duration
+      }, 300);
     }
-  }, [navBarColor]);
+  }, [activeSectionColor]);
 
   return (
-    <div className="w-full h-[15vh] sticky top-0 flex items-end bg-dark">
-      <div className="w-[30%] h-[70%] bg-light flex justify-center items-center bottom-0">
-        <h1 className="text-7xl text-dark">STEM</h1>
-      </div>
+    <div className="w-full h-[15vh] flex items-end bg-dark">
       <div
         id="navbar"
-        className={`w-[75%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 transition-all duration-250 ${navBarColor}`}
+        className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 transition-all duration-250 ${activeSectionColor}`}
       >
         <a href="#science" className="text-lg text-light">
           Science
