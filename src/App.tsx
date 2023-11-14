@@ -42,8 +42,7 @@ function App() {
           <Navbar />
         </div>
       </sectionContext.Provider>
-      <div className="ml-40">
-        <div className="w-[90%] h-[1px] bg-slate-400"></div>
+      <div className="">
         <SciencePage />
         <div className="w-full h-[1px] bg-slate-400"></div>
         <TechnologyPage />

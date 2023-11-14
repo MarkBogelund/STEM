@@ -67,7 +67,7 @@ function Sidebar() {
   }, [activeSection, activeSectionColor]);
 
   return (
-    <div className="w-[30%] h-screen flex flex-col">
+    <div className="w-[22%] h-screen flex flex-col absolute">
       <div className="w-full h-[5%] bg-dark"></div>
       <div className="w-full flex-grow bg-light shadow-lg flex flex-col items-center">
         <h1 className="text-4xl my-10 text-black">{section}</h1>
