@@ -70,8 +70,7 @@ function Sidebar() {
     <div className="w-[30%] h-screen flex flex-col">
       <div className="w-full h-[5%] bg-dark"></div>
       <div className="w-full flex-grow bg-light shadow-lg flex flex-col items-center">
-        <h1 className="text-4xl mt-10 text-black">{section}</h1>
-        <div className="w-full h-[0.5%] bg-light mt-10 mb-5"></div>
+        <h1 className="text-4xl my-10 text-black">{section}</h1>
         <div className="flex-grow w-[95%] h-[400px] overflow-y-scroll no-scrollbar">
           {activities.map((activity, index) => (
             <div key={index} className="w-full h-[25%] mb-5 px-2">
