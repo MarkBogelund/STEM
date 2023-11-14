@@ -43,12 +43,7 @@ function App() {
         </div>
       </sectionContext.Provider>
       <div className="ml-40">
-        {/* <div className="w-full h-[50vh] flex justify-center items-center">
-          <h1 className="text-xl">
-            Det nye initiativ for en strømlignet naturvidenskabelig karriere
-          </h1>
-        </div> */}
-        <div className="w-full h-[1px] bg-slate-400"></div>
+        <div className="w-[90%] h-[1px] bg-slate-400"></div>
         <SciencePage />
         <div className="w-full h-[1px] bg-slate-400"></div>
         <TechnologyPage />

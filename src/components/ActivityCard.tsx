@@ -31,7 +31,7 @@ const ActivityCard = ({
   return (
     <div
       ref={activityRef}
-      className={`w-full h-full flex p-2 gap-2 items-center relative transition-all duration-250 ${color}`}
+      className={`w-full h-full flex p-2 gap-2 items-center relative transition-all duration-250`}
     >
       <div className="w-[40%] h-[90%] aspect-square bg-black flex items-center z-10">
         <img className="w-full h-full object-cover" src={img} alt={title} />
@@ -41,7 +41,7 @@ const ActivityCard = ({
         <p className="text-xs">{date}</p>
         <p>{truncatedDescription}</p>
       </div>
-      <div className="absolute inset-0 bg-[#ffffff] opacity-70"></div>
+      {/* <div className="absolute inset-0 bg-[#ffffff] opacity-70"></div> */}
     </div>
   );
 };

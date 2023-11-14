@@ -92,7 +92,7 @@ const Navbar = () => {
     <div className="w-full h-[15vh] flex items-end bg-dark">
       <div
         id="navbar"
-        className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 transition-all duration-250 ${activeSectionColor}`}
+        className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-md transition-all duration-250 ${activeSectionColor}`}
       >
         <a href="#science" className="text-lg text-light">
           Science
