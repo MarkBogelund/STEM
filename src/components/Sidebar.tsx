@@ -38,7 +38,8 @@ function Sidebar() {
     {
       title: "Activity 6",
       img: "https://picsum.photos/200/300",
-      description: "Lorem ipsum dolor sit amet",
+      description:
+        "Lorem ipsum dolor sit amet fbd gjklds sd klm sedavksd fgsejkg f mnsd ndb s fas nfm",
       date: "2021-09-01",
     },
     {
@@ -68,9 +69,9 @@ function Sidebar() {
   return (
     <div className="w-[30%] h-screen flex flex-col">
       <div className="w-full h-[5%] bg-dark"></div>
-      <div className="w-full flex-grow bg-[#b5d4ee] shadow-md flex flex-col items-center">
+      <div className="w-full flex-grow bg-light shadow-lg flex flex-col items-center">
         <h1 className="text-4xl mt-10 text-black">{section}</h1>
-        <div className="w-full h-[0.5%] bg-[#b5d4ee] mt-10 mb-5"></div>
+        <div className="w-full h-[0.5%] bg-light mt-10 mb-5"></div>
         <div className="flex-grow w-[95%] h-[400px] overflow-y-scroll no-scrollbar">
           {activities.map((activity, index) => (
             <div key={index} className="w-full h-[25%] mb-5 px-2">
