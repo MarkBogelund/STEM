@@ -6,8 +6,8 @@ const MathematicsPage = () => {
     >
       <h1 className="text-5xl mt-[10%]">MATHEMATICS</h1>
       <img
-        className="w-[25%]"
-        src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        className="w-[20%] aspect-square object-cover"
+        src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt=""
       />
       <div className="w-[30%] h-[50%]">

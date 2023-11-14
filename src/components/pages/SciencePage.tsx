@@ -6,7 +6,7 @@ const SciencePage = () => {
     >
       <h1 className="text-5xl mt-[10%]">SCIENCE</h1>
       <img
-        className="w-[25%]"
+        className="w-[20%] aspect-square object-cover"
         src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt=""
       />
