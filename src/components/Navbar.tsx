@@ -88,7 +88,7 @@ const Navbar = () => {
   }, [activeSectionColor]);
 
   return (
-    <div className="w-full h-[15vh] flex items-end bg-dark">
+    <div className="w-full h-[12vh] flex items-end bg-dark">
       <div
         id="navbar"
         className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-lg transition-all duration-250 ${activeSectionColor}`}
