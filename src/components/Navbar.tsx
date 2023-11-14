@@ -1,11 +1,10 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { sectionContext } from "../App";
-import { act } from "react-dom/test-utils";
 
 const Navbar = () => {
   const { setActiveSection, setActiveSectionColor, activeSectionColor } =
     useContext(sectionContext);
-  const offset = 400;
+  const offset = 300;
 
   const convertSectionHeightToPixels = (section: HTMLElement) => {
     const rect = section.getBoundingClientRect();

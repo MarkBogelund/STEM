@@ -47,7 +47,7 @@ function App() {
           <Navbar />
         </div>
       </sectionContext.Provider>
-      <div className="">
+      <div className="flex flex-col">
         <SciencePage />
         <div className="w-full h-[1px] bg-slate-400"></div>
         <TechnologyPage />
