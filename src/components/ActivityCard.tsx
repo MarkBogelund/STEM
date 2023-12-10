@@ -1,40 +1,22 @@
-import { useEffect, useRef } from "react";
-
 const ActivityCard = ({
   title,
   img,
   description,
   date,
-  color,
 }: {
   title: string;
   img: string;
   description: string;
   date: string;
-  color: string;
 }) => {
   const truncatedDescription = truncateText(description, 120);
 
-  const activityRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const navbarElement = activityRef.current as HTMLElement;
-    console.log(navbarElement);
-    if (navbarElement) {
-      navbarElement.classList.add("transition-bg-color");
-      setTimeout(() => {
-        navbarElement.classList.remove("transition-bg-color");
-      }, 300);
-    }
-  }, [color]);
-
   return (
     <div
-      ref={activityRef}
-      className={`w-full h-full flex p-2 gap-2 items-center relative transition-all duration-250`}
+      className={`w-full h-full flex p-2 gap-2 items-center relative transition-all duration-250 bg-white`}
     >
       <img
-        className=" w-36 aspect-square object-cover z-10 ml-3 shadow-sm"
+        className="w-[40%] aspect-square object-cover z-10 ml-3 shadow-sm"
         src={img}
         alt={title}
       />
