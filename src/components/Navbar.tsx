@@ -53,16 +53,16 @@ const Navbar = () => {
   }, [activeSectionColor]);
 
   return (
-    <div className="w-full h-[12vh] flex items-end bg-dark">
+    <div className="w-full h-[6vh] flex items-end">
       <div
         id="navbar"
-        className={`w-full h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-lg transition-all duration-250 ${activeSectionColor}`}
+        className={`w-full h-[100%] flex justify-center items-center gap-16 shadow-lg transition-all duration-250 ${activeSectionColor}`}
       >
         {sections.map(({ id, name }) => (
           <a
             key={id}
             href={`#${id}`}
-            className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+            className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b] flex items-center"
           >
             {name}
           </a>

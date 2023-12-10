@@ -4,7 +4,7 @@ import { page_information } from "../data/page_information";
 
 const SciencePage = () => {
   return (
-    <div id="science" className="w-full h-[120vh] bg-[#fafcff]">
+    <div id="science" className="w-full h-[120vh] bg-[#ffffff]">
       <div className="grid grid-cols-3 w-full mt-[10%]">
         <div></div>
         <div className="mb-10">
