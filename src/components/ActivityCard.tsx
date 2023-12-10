@@ -20,7 +20,7 @@ const ActivityCard = ({
         src={img}
         alt={title}
       />
-      <div className="flex flex-col justify-start z-10 overflow-hidden h-[90%]">
+      <div className="flex flex-col justify-start z-10 overflow-hidden h-[90%] w-[60%] border border-black">
         <h1 className="text-xl font-bold mt-0">{title}</h1>
         <p className="text-xs">{date}</p>
         <p>{truncatedDescription}</p>
