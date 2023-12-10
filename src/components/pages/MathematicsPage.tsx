@@ -1,5 +1,6 @@
 import MathematicsLogo from "../../images/mathematics.svg";
 import { IMAGE_LINKS } from "../../utilities/image_links";
+import { page_information } from "../../data/page_information";
 
 const MathematicsPage = () => {
   return (
@@ -22,18 +23,8 @@ const MathematicsPage = () => {
         <div></div>
         <div></div>
         <div className="flex flex-col gap-5">
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            quibusdam aliquid incidunt, nam facilis iste dolores dolorem,
-            ducimus illo at ipsam temporibus? Ipsa sed fuga alias quae expedita
-            est impedit? Lorem ipsum dolor sit
-          </p>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            quibusdam aliquid incidunt, nam facilis iste dolores dolorem,
-            ducimus illo at ipsam temporibus? Ipsa sed fuga alias quae expedita
-            est impedit? Lorem ipsum dolor sit
-          </p>
+          <p className="">{page_information.mathematics_section_1}</p>
+          <p className="">{page_information.mathematics_section_2}</p>
         </div>
         <div>
           <img

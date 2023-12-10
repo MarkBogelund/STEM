@@ -1,39 +1,42 @@
 export const ACTIVITIES = [
   {
-    title: "Activity 1",
+    title: "Naturvidenskabeligt Eksperiment",
     img: "https://picsum.photos/200/100",
-    description: "Lorem ipsum dolor sit amet",
+    description:
+      "Opdag vidundrene inden for kemi gennem praktiske eksperimenter.",
     date: "2021-09-01",
   },
   {
-    title: "Activity 2",
+    title: "Kodeværksted",
     img: "https://picsum.photos/200/200",
-    description: "Lorem ipsum dolor sit amet",
+    description:
+      "Deltag i vores kodeværksted og udforsk verdenen af programmering.",
     date: "2021-09-01",
   },
   {
-    title: "Activity 3",
+    title: "Ingeniøropgave",
     img: "https://picsum.photos/200/300",
-    description: "Lorem ipsum dolor sit amet",
+    description: "Byg broer og strukturer i vores spændende ingeniøropgave.",
     date: "2021-09-01",
   },
   {
-    title: "Activity 4",
+    title: "Matematik Quiz-aften",
     img: "https://picsum.photos/200/400",
     description:
-      "In the episode of the truman show, i will be playing the role of the truman show",
+      "Test dine matematiske færdigheder i vores quiz-aften med udfordrende matematiske spørgsmål.",
     date: "2021-09-01",
   },
   {
-    title: "Activity 5",
+    title: "Robotik Udstilling",
     img: "https://picsum.photos/200/500",
-    description: "Lorem ipsum dolor sit amet",
+    description: "Udforsk robotikkens verden gennem interaktive udstillinger.",
     date: "2021-09-01",
   },
   {
-    title: "Activity 6",
+    title: "Matematik Kunstværksted",
     img: "https://picsum.photos/200/600",
-    description: "Lorem ipsum dolor sit amet",
+    description:
+      "Kombiner kreativitet og matematik i vores unikke matematik kunstværksted.",
     date: "2021-09-01",
   },
 ];
