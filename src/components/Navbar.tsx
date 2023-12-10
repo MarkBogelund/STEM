@@ -1,15 +1,24 @@
-import { useEffect, useContext } from "react";
-import { sectionContext } from "../App";
+import { useEffect } from "react";
+import { useSectionContext } from "./SectionContext";
 
 const Navbar = () => {
   const { setActiveSection, setActiveSectionColor, activeSectionColor } =
-    useContext(sectionContext);
+    useSectionContext();
+
   const offset = 300;
 
   const convertSectionHeightToPixels = (section: HTMLElement) => {
     const rect = section.getBoundingClientRect();
     const sectionHeightInPixels = rect.bottom - rect.top;
     return sectionHeightInPixels;
+  };
+
+  const scrollIsWithinSection = (section: HTMLElement) => {
+    const sectionHeightInPixels = convertSectionHeightToPixels(section);
+    return (
+      window.scrollY >= section.offsetTop - offset &&
+      window.scrollY < section.offsetTop + sectionHeightInPixels - offset
+    );
   };
 
   window.addEventListener("scroll", () => {
@@ -24,55 +33,27 @@ const Navbar = () => {
       "#mathematics"
     ) as HTMLElement;
 
-    const scienceSectionHeightInPixels = convertSectionHeightToPixels(
-      scienceSection!
-    );
-
-    const technologySectionHeightInPixels = convertSectionHeightToPixels(
-      technologySection!
-    );
-
-    const engenieeringSectionHeightInPixels = convertSectionHeightToPixels(
-      engenieeringSection!
-    );
-
-    const mathematicsSectionHeightInPixels = convertSectionHeightToPixels(
-      mathematicsSection!
-    );
-
-    if (
-      window.scrollY >= scienceSection.offsetTop - offset &&
-      window.scrollY <
-        scienceSection.offsetTop + scienceSectionHeightInPixels - offset
-    ) {
-      setActiveSection("Science");
-      setActiveSectionColor("bg-custom_blue");
-    } else if (
-      window.scrollY >= technologySection.offsetTop - offset &&
-      window.scrollY <
-        technologySection.offsetTop + technologySectionHeightInPixels - offset
-    ) {
-      setActiveSection("Technology");
-      setActiveSectionColor("bg-custom_green");
-    } else if (
-      window.scrollY >= engenieeringSection.offsetTop - offset &&
-      window.scrollY <
-        engenieeringSection.offsetTop +
-          engenieeringSectionHeightInPixels -
-          offset
-    ) {
-      setActiveSection("Engineering");
-      setActiveSectionColor("bg-custom_red");
-    } else if (
-      window.scrollY >= mathematicsSection.offsetTop - offset &&
-      window.scrollY <
-        mathematicsSection.offsetTop + mathematicsSectionHeightInPixels - offset
-    ) {
-      setActiveSection("Mathematics");
-      setActiveSectionColor("bg-custom_yellow");
-    } else {
-      setActiveSection("STEM");
-      setActiveSectionColor("bg-custom_blue");
+    switch (true) {
+      case scrollIsWithinSection(scienceSection):
+        setActiveSection("Science");
+        setActiveSectionColor("bg-custom_blue");
+        break;
+      case scrollIsWithinSection(technologySection):
+        setActiveSection("Technology");
+        setActiveSectionColor("bg-custom_green");
+        break;
+      case scrollIsWithinSection(engenieeringSection):
+        setActiveSection("Engineering");
+        setActiveSectionColor("bg-custom_red");
+        break;
+      case scrollIsWithinSection(mathematicsSection):
+        setActiveSection("Mathematics");
+        setActiveSectionColor("bg-custom_yellow");
+        break;
+      default:
+        setActiveSection("STEM");
+        setActiveSectionColor("bg-custom_blue");
+        break;
     }
   });
 
