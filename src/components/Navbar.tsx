@@ -18,7 +18,7 @@ const Navbar = () => {
       "#technology"
     ) as HTMLElement;
     const engenieeringSection = document.querySelector(
-      "#engenieering"
+      "#engineering"
     ) as HTMLElement;
     const mathematicsSection = document.querySelector(
       "#mathematics"
@@ -93,16 +93,28 @@ const Navbar = () => {
         id="navbar"
         className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-lg transition-all duration-250 ${activeSectionColor}`}
       >
-        <a href="#science" className="text-lg text-light">
+        <a
+          href="#science"
+          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+        >
           Science
         </a>
-        <a href="#technology" className="text-lg text-light">
+        <a
+          href="#technology"
+          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+        >
           Technology
         </a>
-        <a href="#engenieering" className="text-lg text-light">
+        <a
+          href="#engineering"
+          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+        >
           Engineering
         </a>
-        <a href="#mathematics" className="text-lg text-light">
+        <a
+          href="#mathematics"
+          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+        >
           Mathematics
         </a>
       </div>

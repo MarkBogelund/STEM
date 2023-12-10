@@ -3,7 +3,7 @@ import { IMAGE_LINKS } from "../../utilities/image_links";
 
 const EngineeringPage = () => {
   return (
-    <div id="engenieering" className="w-full h-[120vh] bg-[#fefbfb]">
+    <div id="engineering" className="w-full h-[120vh] bg-[#fefbfb]">
       <div className="grid grid-cols-3 w-full mt-[10%]">
         <div></div>
         <div className="mb-10">
