@@ -2,102 +2,72 @@ import { useEffect } from "react";
 import { useSectionContext } from "./SectionContext";
 
 const Navbar = () => {
-  const { setActiveSection, setActiveSectionColor, activeSectionColor } =
+  const { activeSectionColor, setActiveSection, setActiveSectionColor } =
     useSectionContext();
+
+  const sections = [
+    { id: "science", name: "Science", color: "bg-custom_blue" },
+    { id: "technology", name: "Technology", color: "bg-custom_green" },
+    { id: "engineering", name: "Engineering", color: "bg-custom_red" },
+    { id: "mathematics", name: "Mathematics", color: "bg-custom_yellow" },
+    { id: "physics", name: "Physics", color: "bg-custom_purple" },
+  ];
 
   const offset = 300;
 
+  const getSectionById = (id: string) =>
+    document.querySelector(`#${id}`) as HTMLElement;
+
   const convertSectionHeightToPixels = (section: HTMLElement) => {
-    const rect = section.getBoundingClientRect();
-    const sectionHeightInPixels = rect.bottom - rect.top;
-    return sectionHeightInPixels;
+    const { top, bottom } = section.getBoundingClientRect();
+    return bottom - top;
   };
 
-  const scrollIsWithinSection = (section: HTMLElement) => {
-    const sectionHeightInPixels = convertSectionHeightToPixels(section);
-    return (
-      window.scrollY >= section.offsetTop - offset &&
-      window.scrollY < section.offsetTop + sectionHeightInPixels - offset
-    );
+  const scrollIsWithinSection = (section: HTMLElement) =>
+    window.scrollY >= section.offsetTop - offset &&
+    window.scrollY <
+      section.offsetTop + convertSectionHeightToPixels(section) - offset;
+
+  const handleScroll = () => {
+    const activeSection =
+      sections.find((section) =>
+        scrollIsWithinSection(getSectionById(section.id))
+      ) || sections[0];
+    setActiveSection(activeSection.name);
+    setActiveSectionColor(activeSection.color);
   };
 
-  window.addEventListener("scroll", () => {
-    const scienceSection = document.querySelector("#science") as HTMLElement;
-    const technologySection = document.querySelector(
-      "#technology"
-    ) as HTMLElement;
-    const engenieeringSection = document.querySelector(
-      "#engineering"
-    ) as HTMLElement;
-    const mathematicsSection = document.querySelector(
-      "#mathematics"
-    ) as HTMLElement;
-
-    switch (true) {
-      case scrollIsWithinSection(scienceSection):
-        setActiveSection("Science");
-        setActiveSectionColor("bg-custom_blue");
-        break;
-      case scrollIsWithinSection(technologySection):
-        setActiveSection("Technology");
-        setActiveSectionColor("bg-custom_green");
-        break;
-      case scrollIsWithinSection(engenieeringSection):
-        setActiveSection("Engineering");
-        setActiveSectionColor("bg-custom_red");
-        break;
-      case scrollIsWithinSection(mathematicsSection):
-        setActiveSection("Mathematics");
-        setActiveSectionColor("bg-custom_yellow");
-        break;
-      default:
-        setActiveSection("STEM");
-        setActiveSectionColor("bg-custom_blue");
-        break;
-    }
-  });
-
-  useEffect(() => {
+  const addTransitionClass = () => {
     const navbarElement = document.querySelector("#navbar") as HTMLElement;
-    console.log(navbarElement);
     if (navbarElement) {
       navbarElement.classList.add("transition-bg-color");
       setTimeout(() => {
         navbarElement.classList.remove("transition-bg-color");
       }, 300);
     }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  useEffect(() => {
+    addTransitionClass();
   }, [activeSectionColor]);
 
   return (
     <div className="w-full h-[12vh] flex items-end bg-dark">
       <div
         id="navbar"
-        className={`w-[100%] h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-lg transition-all duration-250 ${activeSectionColor}`}
+        className={`w-full h-[37.5%] flex justify-center items-center gap-16 bottom-0 right-0 shadow-lg transition-all duration-250 ${activeSectionColor}`}
       >
-        <a
-          href="#science"
-          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
-        >
-          Science
-        </a>
-        <a
-          href="#technology"
-          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
-        >
-          Technology
-        </a>
-        <a
-          href="#engineering"
-          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
-        >
-          Engineering
-        </a>
-        <a
-          href="#mathematics"
-          className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
-        >
-          Mathematics
-        </a>
+        {sections.map(({ id, name }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b]"
+          >
+            {name}
+          </a>
+        ))}
       </div>
     </div>
   );
