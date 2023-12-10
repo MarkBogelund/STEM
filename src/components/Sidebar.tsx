@@ -11,7 +11,7 @@ function Sidebar() {
       <div className="w-full h-[4vh] bg-dark"></div>
       <div className="w-full flex-grow bg-light shadow-lg flex flex-col items-center">
         <h1 className="text-4xl my-10 text-black">{activeSection}</h1>
-        <div className="flex-grow w-[95%] h-[400px] overflow-y-scroll no-scrollbar">
+        <div className="flex-grow w-[95%] h-[400px] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FFFFFF] scrollbar-thumb-rounded-md">
           {ACTIVITIES.map((activity, index) => (
             <div key={index} className="w-full h-[25%] mb-5 px-2">
               <ActivityCard
