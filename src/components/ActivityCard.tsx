@@ -9,7 +9,7 @@ const ActivityCard = ({
   description: string;
   date: string;
 }) => {
-  const truncatedDescription = truncateText(description, 120);
+  const truncatedDescription = truncateText(description, 100);
 
   return (
     <div
@@ -20,12 +20,11 @@ const ActivityCard = ({
         src={img}
         alt={title}
       />
-      <div className="flex flex-col justify-start h-[90%] z-10 overflow-hidden">
+      <div className="flex flex-col justify-start z-10 overflow-hidden h-[90%]">
         <h1 className="text-xl font-bold mt-0">{title}</h1>
         <p className="text-xs">{date}</p>
         <p>{truncatedDescription}</p>
       </div>
-      <div className="absolute inset-0 bg-[#ffffff6d] shadow-md"></div>
     </div>
   );
 };
