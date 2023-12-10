@@ -1,6 +1,7 @@
 import React from "react";
 import Animation from "./Animation";
 import LogoAnimationData from "../animations/logoFinal.json";
+import BannerVideo from "../videos/bannerVideoDemoDone.mp4";
 
 const Banner: React.FC = () => {
   return (
@@ -10,11 +11,18 @@ const Banner: React.FC = () => {
         <div className="w-14 aspect-square flex justify-center items-center text-white"></div>
       </div>
 
-      <div className="top-0 w-full h-[35vh] bg-dark flex justify-center items-center">
-        <Animation
+      <div className="top-0 w-full h-[45vh] bg-dark flex justify-center items-center">
+        {/* <Animation
           animationData={LogoAnimationData}
           loop={true}
           className="w-[40%] translate-y-10"
+        /> */}
+        <video
+          className="w-full h-full object-cover"
+          src={BannerVideo}
+          autoPlay
+          loop
+          muted
         />
       </div>
     </>

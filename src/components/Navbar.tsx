@@ -10,7 +10,6 @@ const Navbar = () => {
     { id: "technology", name: "Technology", color: "bg-custom_green" },
     { id: "engineering", name: "Engineering", color: "bg-custom_red" },
     { id: "mathematics", name: "Mathematics", color: "bg-custom_yellow" },
-    { id: "physics", name: "Physics", color: "bg-custom_purple" },
   ];
 
   const offset = 300;
