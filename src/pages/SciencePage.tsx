@@ -1,4 +1,4 @@
-import ScienceLogo from "../images/science.svg";
+import ScienceLogo from "../images/science_page_logo.svg";
 import { IMAGE_LINKS } from "../utilities/image_links";
 import { page_information } from "../data/page_information";
 
