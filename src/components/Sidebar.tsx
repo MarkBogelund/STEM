@@ -6,7 +6,7 @@ function Sidebar() {
   const { activeSection } = useSectionContext();
 
   return (
-    <div className="w-[22%] h-screen flex flex-col absolute z-20">
+    <div className="w-[23%] h-screen flex flex-col absolute z-20">
       <div className="w-full h-[3vh]"></div>
       <div className="w-full flex-grow bg-[#ffffff] shadow-lg flex flex-col items-center">
         <h1 className="text-4xl my-10 text-black">{activeSection}</h1>
@@ -17,7 +17,6 @@ function Sidebar() {
                 title={activity.title}
                 img={activity.img}
                 description={activity.description}
-                date={activity.date}
               />
             </div>
           ))}

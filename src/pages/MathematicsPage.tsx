@@ -6,7 +6,7 @@ const MathematicsPage = () => {
   return (
     <div
       id="mathematics"
-      className="w-full h-[120vh] flex flex-col items-center gap-5 bg-[#fffef9]"
+      className="w-full h-[120vh] flex flex-col items-center gap-5 bg-[#ffffff]"
     >
       <div className="grid grid-cols-3 w-full mt-[10%]">
         <div></div>
