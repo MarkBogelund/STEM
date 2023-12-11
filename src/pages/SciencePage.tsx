@@ -14,14 +14,18 @@ const SciencePage = () => {
               src={ScienceLogo}
               alt=""
             />
-            <h1 className="text-4xl">SCIENCE</h1>
+            <h1 className="text-4xl font-didact-gothic">Science</h1>
           </div>
         </div>
         <div></div>
         <div></div>
         <div className="flex flex-col gap-5">
-          <p className="">{page_information.science_section_1}</p>
-          <p className="">{page_information.science_section_2}</p>
+          <p className="font-libre-baskerville">
+            {page_information.science_section_1}
+          </p>
+          <p className="font-libre-baskerville">
+            {page_information.science_section_2}
+          </p>
         </div>
         <div>
           <img

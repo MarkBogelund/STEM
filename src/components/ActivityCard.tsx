@@ -17,8 +17,8 @@ const ActivityCard = ({
         alt={title}
       />
       <div className="flex flex-col justify-start z-10 overflow-hidden h-[90%] w-[65%] py-1">
-        <h1 className="text-md font-bold mt-0">{title}</h1>
-        <p className="text-xs">{truncatedDescription}</p>
+        <h1 className="text-md font-bold mt-0 font-didact-gothic">{title}</h1>
+        <p className="text-xs font-libre-baskerville">{truncatedDescription}</p>
       </div>
     </div>
   );

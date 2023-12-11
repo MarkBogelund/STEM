@@ -6,10 +6,14 @@ export default {
       colors: {
         dark: "#2C2C2C",
         light: "#F0F0F0",
-        custom_blue: "#4F90CD",
-        custom_red: "#CD4F4F",
-        custom_green: "#52CD4F",
-        custom_yellow: "#CDB94F",
+        custom_blue: "#48a1a6",
+        custom_red: "#e29522",
+        custom_green: "#5c4573",
+        custom_yellow: "#dd4127",
+      },
+      fontFamily: {
+        "didact-gothic": ["Didact Gothic", "sans-serif"],
+        "libre-baskerville": ["Libre Baskerville", "serif"],
       },
     },
   },

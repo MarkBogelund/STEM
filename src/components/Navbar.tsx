@@ -62,7 +62,7 @@ const Navbar = () => {
           <a
             key={id}
             href={`#${id}`}
-            className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b] flex items-center"
+            className="text-lg text-light h-full px-2 transition-all hover:bg-[#0000002b] flex items-center font-didact-gothic"
           >
             {name}
           </a>

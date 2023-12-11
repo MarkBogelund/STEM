@@ -14,14 +14,18 @@ const TechnologyPage = () => {
               src={TechnologyLogo}
               alt=""
             />
-            <h1 className="text-4xl">TECHNOLOGY</h1>
+            <h1 className="text-4xl font-didact-gothic">Technology</h1>
           </div>
         </div>
         <div></div>
         <div></div>
         <div className="flex flex-col gap-5">
-          <p className="">{page_information.technology_section_1}</p>
-          <p className="">{page_information.technology_section_2}</p>
+          <p className="font-libre-baskerville">
+            {page_information.technology_section_1}
+          </p>
+          <p className="font-libre-baskerville">
+            {page_information.technology_section_2}
+          </p>
         </div>
         <div>
           <img
