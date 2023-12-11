@@ -1,4 +1,4 @@
-import MathematicsLogo from "../images/mathematics.svg";
+import MathematicsLogo from "../images/math_symbol.svg";
 import { IMAGE_LINKS } from "../utilities/image_links";
 import { page_information } from "../data/page_information";
 
