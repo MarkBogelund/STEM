@@ -1,4 +1,4 @@
-import TechnologyLogo from "../images/tech_symbol.svg";
+import TechnologyLogo from "../images/technology_kant.svg";
 import { IMAGE_LINKS } from "../utilities/image_links";
 import { page_information } from "../data/page_information";
 

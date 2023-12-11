@@ -1,4 +1,4 @@
-import EngineeringLogo from "../images/engeneering_symbol.svg";
+import EngineeringLogo from "../images/engeneering_kant.svg";
 import { IMAGE_LINKS } from "../utilities/image_links";
 import { page_information } from "../data/page_information";
 
