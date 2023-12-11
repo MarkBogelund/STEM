@@ -1,7 +1,7 @@
 import React from "react";
 import BannerVideo from "../videos/bannerVideoDemoDone.mp4";
 import SDU_logo from "../images/SDU_logo.svg";
-import STEM_logo from "../images/H_logo_hvid.svg";
+import STEM_logo from "../images/STEM_logo.svg";
 
 const Banner: React.FC = () => {
   return (
