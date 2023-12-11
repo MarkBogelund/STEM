@@ -2,6 +2,7 @@ import React from "react";
 import BannerVideo from "../videos/bannerVideoDemoDone.mp4";
 import SDU_logo from "../images/SDU_logo.svg";
 import STEM_logo from "../images/STEM_logo.svg";
+import STEM_logo_white from "../images/STEM_logo_white.svg";
 
 const Banner: React.FC = () => {
   return (
