@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556.222 556.222">
+<svg id="Lag_2" data-name="Lag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.349 416.547">
   <g id="Lag_1-2" data-name="Lag 1">
-    <rect x="15" y="15" width="526.222" height="526.222" fill="none" stroke="#48a1a6" stroke-miterlimit="10" stroke-width="30"/>
     <g>
-      <polygon points="160.771 255.045 67.606 255.045 114.188 162.441 160.771 69.838 207.353 162.441 253.936 255.045 160.771 255.045" fill="#48a1a6" stroke-width="0"/>
-      <rect x="136.767" y="69.838" width="48.008" height="96.016" fill="#48a1a6" stroke-width="0"/>
+      <g>
+        <rect x="303.968" y="231.427" width="53.642" height="185.12" stroke-width="0"/>
+        <rect x="303.968" y="231.427" width="53.642" height="185.12" transform="translate(654.777 -6.802) rotate(90)" stroke-width="0"/>
+      </g>
+      <g>
+        <polygon points="99.334 185.208 6.169 185.208 52.752 92.604 99.334 0 145.917 92.604 192.5 185.208 99.334 185.208" fill="#48a1a6" stroke-width="0"/>
+        <rect x="75.33" y="0" width="48.008" height="96.016" fill="#48a1a6" stroke-width="0"/>
+      </g>
+      <path d="m149.002,237.958H49.667L0,323.987l49.667,86.014h99.334l49.667-86.014-49.667-86.03Zm-49.667,127.113c-22.699,0-41.083-18.399-41.083-41.083s18.384-41.083,41.083-41.083,41.083,18.384,41.083,41.083-18.399,41.083-41.083,41.083Z" stroke-width="0"/>
+      <rect x="238.229" y="136.948" width="48.216" height="48.216" stroke-width="0"/>
+      <rect x="375.134" y="0" width="48.216" height="185.164" stroke-width="0"/>
+      <rect x="306.682" y="58.538" width="48.216" height="126.626" stroke-width="0"/>
     </g>
   </g>
 </svg>
