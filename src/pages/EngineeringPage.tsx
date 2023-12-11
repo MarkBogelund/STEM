@@ -14,7 +14,7 @@ const EngineeringPage = () => {
               src={EngineeringLogo}
               alt=""
             />
-            <h1 className="text-5xl">ENGINEERING</h1>
+            <h1 className="text-4xl">ENGINEERING</h1>
           </div>
         </div>
         <div></div>

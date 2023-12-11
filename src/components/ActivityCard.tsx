@@ -10,7 +10,7 @@ const ActivityCard = ({
   const truncatedDescription = truncateText(description, 100);
 
   return (
-    <div className="w-full h-full flex gap-2 items-center shadow-lg transition-all duration-250 bg-[#f7f7f7] hover:scale-[102%]">
+    <div className="w-full h-full flex gap-2 items-center shadow-lg transition-all duration-250 bg-[#f9f9f9] hover:scale-[102%]">
       <img
         className="w-[35%] aspect-square object-cover z-10 ml-3 shadow-sm"
         src={img}

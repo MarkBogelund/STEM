@@ -17,7 +17,7 @@ const MathematicsPage = () => {
               src={MathematicsLogo}
               alt=""
             />
-            <h1 className="text-5xl">MATHEMATICS</h1>
+            <h1 className="text-4xl">MATHEMATICS</h1>
           </div>
         </div>
         <div></div>

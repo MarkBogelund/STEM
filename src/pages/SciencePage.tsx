@@ -14,7 +14,7 @@ const SciencePage = () => {
               src={ScienceLogo}
               alt=""
             />
-            <h1 className="text-5xl">SCIENCE</h1>
+            <h1 className="text-4xl">SCIENCE</h1>
           </div>
         </div>
         <div></div>

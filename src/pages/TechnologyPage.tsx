@@ -14,7 +14,7 @@ const TechnologyPage = () => {
               src={TechnologyLogo}
               alt=""
             />
-            <h1 className="text-5xl">TECHNOLOGY</h1>
+            <h1 className="text-4xl">TECHNOLOGY</h1>
           </div>
         </div>
         <div></div>
